@@ -2,11 +2,21 @@ package webservicesandra.webservicesandra.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import webservicesandra.webservicesandra.entity.Joke;
+import webservicesandra.webservicesandra.model.Joke;
+import webservicesandra.webservicesandra.repository.JokeRepository;
+
+import java.util.List;
+
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/jokes")
 public class JokeController {
+
+    private final JokeRepository jokeRepository;
+
+    public JokeController(JokeRepository jokeRepository) {
+        this.jokeRepository = jokeRepository;
+    }
 
     @GetMapping("/question")
     public String getQuestion() {
@@ -18,8 +28,14 @@ public class JokeController {
         return "..it was about time too!";
     }
 
-    @PostMapping("/joker")
-    public String sendJoke(@RequestBody Joke joke) {
-        return "Posted: " + joke;
+    @PostMapping("")
+    public ResponseEntity<Joke> addJoke(@RequestBody Joke joke) {
+        Joke respJoke = jokeRepository.save(joke);
+        return ResponseEntity.status(201).body(respJoke);
+    }
+
+    @GetMapping("/")
+    public ResponseEntity<List<Joke>> allJokes() {
+        return ResponseEntity.ok(jokeRepository.findAll());
     }
 }

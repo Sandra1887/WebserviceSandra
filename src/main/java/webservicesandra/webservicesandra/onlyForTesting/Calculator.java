@@ -1,4 +1,4 @@
-package webservicesandra.webservicesandra.service;
+package webservicesandra.webservicesandra.onlyForTesting;
 
 public class Calculator {
     private static int numberOne = 3;

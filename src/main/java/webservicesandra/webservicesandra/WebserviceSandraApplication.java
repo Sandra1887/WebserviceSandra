@@ -8,6 +8,5 @@ public class WebserviceSandraApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(WebserviceSandraApplication.class, args);
-
     }
 }
