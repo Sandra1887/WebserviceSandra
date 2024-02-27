@@ -11,7 +11,7 @@ Joke database with
 
 ### Use
 - Start this app on your local machine
-- in your uri/or on Postman enter: localhost:5000/jokes
+- in your uri/or on Postman enter: https://webservice-app.us-west-2.elasticbeanstalk.com/jokes<endpoint>
 
 *Endpoints*
 - "/" - (GET) - see all jokes
@@ -22,8 +22,6 @@ Joke database with
 Access to database:
 - Download MongoDBCompass 
 - Connect in Compass with: mongodb+srv://Guest:qwerty123@aws-jokes.qej31ae.mongodb.net/
-- Download Postman
-- Read and post to: https://webservice-app.us-west-2.elasticbeanstalk.com<endpoint>
 
 ### Creation
 - Build and testing on:
