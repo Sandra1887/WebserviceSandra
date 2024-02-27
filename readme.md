@@ -22,6 +22,8 @@ Joke database with
 Access to database:
 - Download MongoDBCompass 
 - Connect in Compass with: mongodb+srv://Guest:qwerty123@aws-jokes.qej31ae.mongodb.net/
+- Download Postman
+- Read and post to: https://webservice-app.us-west-2.elasticbeanstalk.com<endpoint>
 
 ### Creation
 - Build and testing on:
